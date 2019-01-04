@@ -1,0 +1,639 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+
+
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder">  Programming Fundamentals 2</h2>
+    <p> Top Level Topics </p>
+  </div>
+
+
+  
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    .
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</header>
+
+
+<div class="ui segment pushable">
+  <div class="ui inverted inline vertical sidebar menu">
+    
+    <div class="header">
+      <a class="item" href="topic01-IntelliJ-JVM-and-IO/index.html">
+        1: IntelliJ and Basic I/O
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic01-IntelliJ-JVM-and-IO/talk-1-introduction-jvm/a-introduction-jvm.pdf">
+          Introduction</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01-IntelliJ-JVM-and-IO/talk-2-oo-recap/b-oo-recap.pdf">
+          OO Recap</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01-IntelliJ-JVM-and-IO/talk-3-scanner-io/e-scanner-io.pdf">
+          Scanner IO</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01-IntelliJ-JVM-and-IO/book-a-install/index.html">
+          Lab-01a</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01-IntelliJ-JVM-and-IO/book-b/index.html">
+          Lab-01b</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic02-primitive-arrays/index.html">
+         2: Primitive Arrays
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic02-primitive-arrays/talk-1-array-recap/a-array-recap.pdf">
+          Array Recap</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02-primitive-arrays/talk-2-array-product/a-array-product.pdf">
+          ShopV2.0</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02-primitive-arrays/book-1-array-exercises/index.html">
+          Lab-02a</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02-primitive-arrays/book-2-shop-v2.x/index.html">
+          Lab-02b</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic03-arraylists/index.html">
+         3: ArrayLists
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic03-arraylists/talk-1-intro-to-arraylists/a-intro-to-arraylists.pdf">
+          Intro to ArrayList</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03-arraylists/talk-2-more-on-arraylists/b-more-on-arraylists.pdf">
+          More on ArrayList</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03-arraylists/book-1-arraylists/index.html">
+          Lab-03</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic04-menu-and-crud/index.html">
+         4: Menu Driven Apps and Persistence
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic04-menu-and-crud/talk-1-menu-driven-systems/a-menu-driven-systems.pdf">
+          Menu Driven Systems</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04-menu-and-crud/talk-2-CRUD/b-CRUD-process.pdf">
+          CRUD Process</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04-menu-and-crud/book-1-loop-exercises/index.html">
+          Lab-04a</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04-menu-and-crud/book-2-crud/index.html">
+          Lab-04b</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic05-persistence-xml-exceptions/index.html">
+         5: Persistence (XML & Exceptions)
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic05-persistence-xml-exceptions/talk-1-XML/a-XML.pdf">
+          Introduction to XML</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05-persistence-xml-exceptions/talk-2-CRUD-XML/b-CRUD-XML.pdf">
+          XML and Java</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05-persistence-xml-exceptions/talk-3-exceptions/c-exceptions.pdf">
+          Exception Handling</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05-persistence-xml-exceptions/talk-4-misc-concepts/d-misc-concepts.pdf">
+          Miscellaneous Concepts</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05-persistence-xml-exceptions/book-xml-exceptions/index.html">
+          Lab-05</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic06-collections-map-set/index.html">
+         6: Collections (Map and Set)
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic06-collections-map-set/talk-1-tech-support-v1/a-tech-support-V1.pdf">
+          Tech Support System V1</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06-collections-map-set/talk-2-tech-support-v2/b-tech-support-V2.pdf">
+          Tech Support System V2</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06-collections-map-set/talk-3-tech-support-v3/c-tech-support-V3.pdf">
+          Tech Support System V3</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06-collections-map-set/book/index.html">
+          Lab-06</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic07-inher-polym/index.html">
+         7: Inheritance and Polymorphism
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic07-inher-polym/talk-1-inheritance/a-inheritance.pdf">
+           Inheritance</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07-inher-polym/talk-2-polymorphism/b-exploring-polymorphism.pdf">
+           Exploring Polymorphism</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07-inher-polym/book/index.html">
+          Lab-07</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic08-abstraction/index.html">
+         8: Abstraction
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic08-abstraction/talk-1-abstraction/a-prog-fund-2-abstraction.pdf">
+           Abstraction</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08-abstraction/book-1-abstraction/index.html">
+          Lab-08</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic09-interfaces/index.html">
+         9: Interfaces
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic09-interfaces/talk-1-deadly-diamond-of-death/a-prog-fund-2-deadly-diamond-of-death .pdf">
+          Deadly Diamond of Death</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09-interfaces/talk-2-intro-to-interfaces/b-prog-fund-2-intro-to-interfaces.pdf">
+          Introduction to Interfaces</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09-interfaces/talk-3-more-on-interfaces/c-prog-fund-2-more-on-interfaces.pdf">
+          More on Interfaces</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09-interfaces/book-interfaces/index.html">
+          Lab-09</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic10-TDD-and-JUnit/index.html">
+         10: TDD and JUnit
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic10-TDD-and-JUnit/talk-1-tdd-intro/a-prog-fund-2-TDD-intro.pdf">
+          Test Driven Development (TDD)</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10-TDD-and-JUnit/talk-2-junit-dvd-class/b-prog-fund-2-junit-dvdtest.pdf">
+          JUnit and DVD.java</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10-TDD-and-JUnit/talk-3-junit-terminology/c-prog-fund-2-junit-terminology.pdf">
+          JUnit Terminology</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10-TDD-and-JUnit/talk-4-planning-tests/d-prog-fund-2-junit-planning-tests.pdf">
+          Planning Testing</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10-TDD-and-JUnit/talk-5-junit-library-class/e-prog-fund-2-junit-library-class.pdf">
+          Completing DVD app testing</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10-TDD-and-JUnit/book-tdd/index.html">
+          Lab-10</a>
+      </div>
+      
+    </div>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+          
+  <a class="ui raised link card" href="./topic01-IntelliJ-JVM-and-IO/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 1: IntelliJ and Basic I/O </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic01-IntelliJ-JVM-and-IO/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>IntelliJ · Java Virtual Machine (JVM) · main method · Scanner · OO recap</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic02-primitive-arrays/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header">  2: Primitive Arrays </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic02-primitive-arrays/topic.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>primitive arrays · basic menu driven systems</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic03-arraylists/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header">  3: ArrayLists </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic03-arraylists/topic.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Collections · Generic Classes · ArrayList · loops · for each loop · algorithms for collections</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic04-menu-and-crud/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header">  4: Menu Driven Apps and Persistence </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic04-menu-and-crud/topic.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Switch · Loops · Menus · persistence · CRUD · debugging</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic05-persistence-xml-exceptions/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header">  5: Persistence (XML & Exceptions) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic05-persistence-xml-exceptions/topic.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Streaming · XML · Exception Handling · Validate User Input · Static · JavaDoc · ShopV5.0 · DVD3.0</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic06-collections-map-set/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header">  6: Collections (Map and Set) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic06-collections-map-set/topic.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Collections · Map · Set · Tech Support App</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic07-inher-polym/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header">  7: Inheritance and Polymorphism </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic07-inher-polym/topic.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Inheritance · <em>is-a</em> relationship · Polymorphism (many shapes!) · Overriding</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic08-abstraction/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header">  8: Abstraction </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic08-abstraction/topic.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Social Network app · Abstraction · Inheritance Hierarchy</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic09-interfaces/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header">  9: Interfaces </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic09-interfaces/topic.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p> Abstraction · Deadly Diamond of Death · Interfaces · Implementing Interfaces · Social Network App</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic10-TDD-and-JUnit/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header">  10: TDD and JUnit </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic10-TDD-and-JUnit/topic.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Test Driven Development (TDD) · JUnit · Test Classes · Annotations · Automating Tests</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.embed').embed();
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

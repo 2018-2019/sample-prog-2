@@ -1,0 +1,335 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      1: IntelliJ and Basic I/O
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-01a">
+      Lab-01a
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="active item" href="../../topic01-IntelliJ-JVM-and-IO/book-a-install/index.html">
+          Lab-01a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01-IntelliJ-JVM-and-IO/book-b/index.html">
+          Lab-01b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-primitive-arrays/book-1-array-exercises/index.html">
+          Lab-02a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-primitive-arrays/book-2-shop-v2.x/index.html">
+          Lab-02b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-arraylists/book-1-arraylists/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-menu-and-crud/book-1-loop-exercises/index.html">
+          Lab-04a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-menu-and-crud/book-2-crud/index.html">
+          Lab-04b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-persistence-xml-exceptions/book-xml-exceptions/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-collections-map-set/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-inher-polym/book/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-abstraction/book-1-abstraction/index.html">
+          Lab-08
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-interfaces/book-interfaces/index.html">
+          Lab-09
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-TDD-and-JUnit/book-tdd/index.html">
+          Lab-10
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-01a">
+        <h1>Objectives</h1>
+<p>Install JDK 10 + IntelliJ Idea (on own computer)</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Preparation</h1>
+<p><strong>NOTE: This entire lab is only for installing Java and IntelliJ on your own personal computers.  If you are using the college computers, please move onto lab01b.</strong></p>
+<h2>Command Prompt</h2>
+<p>Launch the command prompt: </p>
+<p><img src="img/01.png" alt=""></p>
+<p>In the next step, we will use this to verify that our Java10 JDK installed successfully.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Install Java JDK: Windows</h1>
+<p>Visit this page:</p>
+<ul>
+<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html">http://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html</a></li>
+</ul>
+<p>We are going to install JDK10, as this is the latest version that is installed on the college computers.  This will make it easier to move your code between your own computer and the college machines.  </p>
+<p><img src="img/31.png" alt=""></p>
+<p>Tick the radio button to accept their licence agreement.   </p>
+<p>If you are using windows, your download is likely to be for Windows 64 e.g.:</p>
+<ul>
+<li>jdk-10.0.2-windows-x64_bin.exe</li>
+</ul>
+<p>Once the exe file is downloaded, follow the steps to install it on your computer. </p>
+<p>To check if it is installed ok - you should type in the following command into the command prompt we opened earlier</p>
+<pre><code>java -version</code></pre>
+<p>If your install was successful, you should get something like this:</p>
+<pre><code>C:\Users\Siobhan&gt;java -version
+java version &quot;10.0.2&quot; 2018-07-17
+Java(TM) SE Runtime Environment 18.3 (build 10.0.2+13)
+Java HotSpot(TM) 64-Bit Server VM 18.3 (build 10.0.2+13, mixed mode)
+
+C:\Users\Siobhan&gt;</code></pre>
+<h1>Install Java JDK: Mac</h1>
+<p>For the mac, the best way to install is to use Brew. These commands should do:</p>
+<pre><code>brew update
+brew install jenv
+brew cask install caskroom/versions/java10</code></pre>
+<p>Getting the correct java version can be a challenge on mac. </p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Install IntelliJ Idea</h1>
+<p>To date we have been using Processing as our editor. </p>
+<p>Now, we will move to a professional Java Integrated Development Environment (IDE) called IntelliJ Idea:</p>
+<ul>
+<li><a href="https://www.jetbrains.com/idea">https://www.jetbrains.com/idea</a></li>
+</ul>
+<p>Before downloading, first create a new <code>Jetbrains</code> account:</p>
+<ul>
+<li><a href="https://account.jetbrains.com/login">https://account.jetbrains.com/login</a></li>
+</ul>
+<p>Make sure to <strong><em>use your WIT email address</em></strong>, as this will allow you to gain access to the professional versions of all Jetbrains products.</p>
+<p>Now proceed to download and install the <code>Ultimate</code> version of the Idea IDE:</p>
+<ul>
+<li><a href="https://www.jetbrains.com/idea">https://www.jetbrains.com/idea</a></li>
+</ul>
+<p>At some stage in the below process, you will be prompted to log in...as you have already created your Jetbrains account, you can log in with your credentials then:</p>
+<p><img src="img/58.png" alt=""></p>
+<p>During installation, make sure the following options are selected during the install:</p>
+<p><img src="img/10.png" alt=""></p>
+<p>When the installation is completing, you may be asked to import settings...choose <em>Do not import settings</em>.</p>
+<p>When the Licence Agreement appears, scroll to the bottom and click on the <em>Accept</em> button.</p>
+<p>Then select your UI theme (See screen shot below) and then click the <em>Skip Remaining and Choose Defaults</em> button:</p>
+<p><img src="img/09.png" alt=""></p>
+<p>This should activate the application, and you will get to the opening screen (note, your version number might be slightly higher than the one below and, depending on the UI theme you chose, it might look different):</p>
+<p><img src="img/18.png" alt=""></p>
+<p>You can now move onto the next lab, where you will verify the IntelliJ installation.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        .
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.embed').embed();
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

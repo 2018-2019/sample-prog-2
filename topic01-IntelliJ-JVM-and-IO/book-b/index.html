@@ -1,223 +1,260 @@
- <!DOCTYPE html>
- <html>
-   <head>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
 
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-     
-
-     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
-
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
-     <script>hljs.initHighlightingOnLoad();</script>
-
-     
-
-     <style>
-       
-
-body 
-{
+body {
   font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
 }
 
-figcaption
-{
-  margin-bottom: 20px;
+p {
+  margin: 0.5em;
 }
 
-.vertical-align
-{
-  display: flex;
-  align-items: center;
-}
-
-
-
-     </style>
-
-   </head>
-
-  <body>
-    
-
-<style>
-  
-
-code
-{
+pre code {
   font-family: "Monaco";
-  font-size: 110%;
+  font-size: 100%;
 }
 
-img
-{
-  padding:1px;
-  border:1px solid black;
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
 }
 
-h1
-{
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
   font-style:italic;
   font-size:130%;
-  border-bottom: thin solid black;
 }
-h2
-{
+
+h2 {
   font-size:110%;
-  border-bottom: thin solid black;
 }
-h3
-{
+
+h3 {
   font-size:100%;
-  border-bottom: thin solid black;
 }
 
 
 
-</style>
+      
 
-<div class="ui fixed top pointing inverted menu labmenu">
-  <header class="header item">
-    <i id="toc" class="sitemap icon"></i>
-    <a href="../index.html">
-      1: IntelliJ and Basic I/O
-    </a>
-  </header>
-  <div class="right tab-menu menu">
-    
-    <a class="item" data-tab="Lab-01b">
-      Lab-01b
-    </a>
-    
-    <a class="item" data-tab="HelloWorld">
-      HelloWorld
-    </a>
-    
-    <a class="item" data-tab="ShopV1.0">
-      ShopV1.0
-    </a>
-    
-    <a class="item" data-tab="Exercise">
-      Exercise
-    </a>
-    
-    <a class="item" data-tab="Challenge">
-      Challenge
-    </a>
-    
-    <a class="item" data-tab="Solutions">
-      Solutions
-    </a>
-    
-    <a class="item" href="../../index.html">
-      <i class="home icon"></i>
-    </a>
-  </div>
-</div>
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
 
-<div class="ui segment pushable">
-  <div class="ui inverted labeled icon left inline vertical sidebar menu">
-    
+
+
+    </style>
+  </head>
+
+  
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
       
-        <a class="item" href="../../topic01-IntelliJ-JVM-and-IO/book-a-install/index.html">
-          Lab-01a
-        </a>
+        <a href="../index.html"> 1: IntelliJ and Basic I/O  </a>
       
-    
+    </header>
+    <div class="right tab-menu menu">
       
-        <a class="active item" href="../../topic01-IntelliJ-JVM-and-IO/book-b/index.html">
+        <a class="item" data-tab="Lab-01b">
           Lab-01b
         </a>
       
-    
-      
-        <a class="item" href="../../topic02-primitive-arrays/book-1-array-exercises/index.html">
-          Lab-02a
+        <a class="item" data-tab="HelloWorld">
+          HelloWorld
         </a>
       
-    
-      
-        <a class="item" href="../../topic02-primitive-arrays/book-2-shop-v2.x/index.html">
-          Lab-02b
+        <a class="item" data-tab="ShopV1.0">
+          ShopV1.0
         </a>
       
-    
-      
-        <a class="item" href="../../topic03-arraylists/book-1-arraylists/index.html">
-          Lab-03
+        <a class="item" data-tab="Exercise">
+          Exercise
         </a>
       
-    
-      
-        <a class="item" href="../../topic04-menu-and-crud/book-1-loop-exercises/index.html">
-          Lab-04a
+        <a class="item" data-tab="Challenge">
+          Challenge
         </a>
       
-    
-      
-        <a class="item" href="../../topic04-menu-and-crud/book-2-crud/index.html">
-          Lab-04b
+        <a class="item" data-tab="Solutions">
+          Solutions
         </a>
       
-    
-      
-        <a class="item" href="../../topic05-persistence-xml-exceptions/book-xml-exceptions/index.html">
-          Lab-05
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic06-collections-map-set/book/index.html">
-          Lab-06
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic07-inher-polym/book/index.html">
-          Lab-07
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic08-abstraction/book-1-abstraction/index.html">
-          Lab-08
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic09-interfaces/book-interfaces/index.html">
-          Lab-09
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic10-TDD-and-JUnit/book-tdd/index.html">
-          Lab-10
-        </a>
-      
-    
+    </div>
   </div>
-  <div class="pusher">
-    <div class="ui basic segment">
-      <br>
+
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
       
-      <div  class="ui tab segment lab" data-tab="Lab-01b">
-        <h1>Objectives</h1>
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic00-assignments/book-a/index.html">Assignment1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic01-IntelliJ-JVM-and-IO/book-a-install/index.html">Lab-01a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic01-IntelliJ-JVM-and-IO/book-b/index.html">Lab-01b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic02-primitive-arrays/book-1-array-exercises/index.html">Lab-02a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic02-primitive-arrays/book-2-shop-v2.x/index.html">Lab-02b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic03-arraylists/book-1-arraylists/index.html">Lab-03 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic04-menu-and-crud/book-1-loop-exercises/index.html">Lab-04a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic04-menu-and-crud/book-2-crud/index.html">Lab-04b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic05-persistence-xml-exceptions/book-xml-exceptions/index.html">Lab-05 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic06-collections-map-set/book/index.html">Lab-06 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic07-inher-polym/book/index.html">Lab-07 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic08-abstraction/book-1-abstraction/index.html">Lab-08 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic09-interfaces/book-interfaces/index.html">Lab-09 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic10-TDD-and-JUnit/book-tdd/index.html">Lab-10 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic11-additional-material/book-1-shopv6/index.html">ShopV6.0 </a>
+          
+        
+      
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="Lab-01b">
+            <h1>Objectives</h1>
 <p>IntelliJ · Java Virtual Machine (JVM) · main method · Scanner · OO recap</p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="HelloWorld">
-        <h1>Verifying IntelliJ Installation</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="HelloWorld">
+            <h1>Verifying IntelliJ Installation</h1>
 <p>The purpose of this step is to verify that your IntelliJ installation is working correctly.  Please do this step regardless of whether you are using the college computers or your own computer. </p>
 <h2>Launch IntelliJ</h2>
 <p>Locate your IntelliJ application and start it (one easy way is to click on the search icon on your task bar and enter <em>IntelliJ</em>).</p>
@@ -259,10 +296,10 @@ Then select <em>Run ‘Main.main()’</em>:</p>
 <p><img src="./img/ide22.PNG" alt=""></p>
 <p>If you are not getting this result, you should flag this to your lecturer who can help diagnose and resolve the issue.</p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="ShopV1.0">
-        <h1>ShopV1.0</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="ShopV1.0">
+            <h1>ShopV1.0</h1>
 <ul>
 <li><p>This console based app will ask the user to enter details for one Product.  The details of the product will be printed back to the user. </p>
 </li>
@@ -327,10 +364,10 @@ Then select <em>Run ‘Main.main()’</em>:</p>
 <h2>Run the App</h2>
 <p>Run the app; does all work as expected?  Are you asked to enter the product details?  Are all details you entered printed back to the console?  </p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="Exercise">
-        <h1>Exercise</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Exercise">
+            <h1>Exercise</h1>
 <p>This exercise will help you become more familiar with the Scanner class.</p>
 <h2>What are you being asked to do?</h2>
 <p>Write a <strong>single</strong> class app that uses Scanner to ask the user to type in the value of an angle: 
@@ -364,10 +401,10 @@ Then select <em>Run ‘Main.main()’</em>:</p>
 <h2>Run the App</h2>
 <p>Run the app; does all work as expected?</p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="Challenge">
-        <h1>Challenge</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Challenge">
+            <h1>Challenge</h1>
 <p>This exercise will help you become more familiar with the Scanner class as well as working with a two class app.</p>
 <p>This console based app will ask the user to enter their personal details.  Their details will then be printed back to the console. </p>
 <p>During this challenge, you may need to view this weeks lecture notes to remind you how to write classes.  The ShopV1.0 solution will also come in handy here.</p>
@@ -407,67 +444,89 @@ Then select <em>Run ‘Main.main()’</em>:</p>
 <p><img src="./img/24.png" alt="Sample Input"></p>
 <p><img src="./img/25.png" alt="Sample Output"></p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="Solutions">
-        <h1>Solutions</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Solutions">
+            <h1>Solutions</h1>
 <p><a href="archives/HelloWorld.zip">HelloWorld</a></p>
 <p><a href="archives/ShopV1.0.zip">ShopV1.0</a></p>
 <p><a href="archives/AngleProject.zip">Exercise - AngleProject</a></p>
 <p><a href="archives/UserDetailsProject.zip">Challenge - UserDetailsProject</a> </p>
 
-      </div>
-     
-    </div>
-  </div>
-</div>
-  <div class="ui bottom fixed borderless right menu">
-    <div class="ui right tiny menu">
-      <div class="ui mini message segment">
-        .
-        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
-            target="_blank">Creative Commons License
-        </a>
+          </div>
+        
       </div>
     </div>
   </div>
 
-    <footer>
 
-    </footer>
-    <script>
-      $(document).ready(function () {
+  <br>
+  <script>
+    $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+    $(document).ready(function() {
   $('img').addClass('ui image');
+
   $('.ui.embed').embed();
 
   const $images = $('.lab img');
-  jQuery.each($images, function (i) {
-    if (($images[i].alt).length > 0) {
-      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
       $($images[i]).wrap(divImg);
-      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
       divLabel.append($images[i].alt);
       $(divLabel).insertBefore($images[i]);
     }
   });
 
-  $('.ui.embed').embed();
-
-  $('.ui.menu .item')
-      .tab({
-        history: true,
-        historyType: 'hash',
-      });
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
 
   $('.popup').popup();
 
   $('.ui.sidebar')
-      .sidebar({ context: $('.pushable') })
-      .sidebar('setting', 'transition', 'slide out')
-      .sidebar('attach events', '#toc');
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
 });
 
-    </script>
+  </script>
+
+
+
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right small menu">
+      <div class="ui tiny basic message segment">
+         Powered by <a href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a> 
+      </div>
+    </div>
+  </div>
+
   </body>
 
- </html>
+</html>

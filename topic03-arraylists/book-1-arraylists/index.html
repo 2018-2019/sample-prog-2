@@ -1,231 +1,268 @@
- <!DOCTYPE html>
- <html>
-   <head>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
 
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-     
-
-     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
-
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
-     <script>hljs.initHighlightingOnLoad();</script>
-
-     
-
-     <style>
-       
-
-body 
-{
+body {
   font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
 }
 
-figcaption
-{
-  margin-bottom: 20px;
+p {
+  margin: 0.5em;
 }
 
-.vertical-align
-{
-  display: flex;
-  align-items: center;
-}
-
-
-
-     </style>
-
-   </head>
-
-  <body>
-    
-
-<style>
-  
-
-code
-{
+pre code {
   font-family: "Monaco";
-  font-size: 110%;
+  font-size: 100%;
 }
 
-img
-{
-  padding:1px;
-  border:1px solid black;
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
 }
 
-h1
-{
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
   font-style:italic;
   font-size:130%;
-  border-bottom: thin solid black;
 }
-h2
-{
+
+h2 {
   font-size:110%;
-  border-bottom: thin solid black;
 }
-h3
-{
+
+h3 {
   font-size:100%;
-  border-bottom: thin solid black;
 }
 
 
 
-</style>
+      
 
-<div class="ui fixed top pointing inverted menu labmenu">
-  <header class="header item">
-    <i id="toc" class="sitemap icon"></i>
-    <a href="../index.html">
-       3: ArrayLists
-    </a>
-  </header>
-  <div class="right tab-menu menu">
-    
-    <a class="item" data-tab="Lab-03">
-      Lab-03
-    </a>
-    
-    <a class="item" data-tab="01">
-      01
-    </a>
-    
-    <a class="item" data-tab="02">
-      02
-    </a>
-    
-    <a class="item" data-tab="03">
-      03
-    </a>
-    
-    <a class="item" data-tab="04">
-      04
-    </a>
-    
-    <a class="item" data-tab="05">
-      05
-    </a>
-    
-    <a class="item" data-tab="Exercises">
-      Exercises
-    </a>
-    
-    <a class="item" data-tab="Solutions">
-      Solutions
-    </a>
-    
-    <a class="item" href="../../index.html">
-      <i class="home icon"></i>
-    </a>
-  </div>
-</div>
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
 
-<div class="ui segment pushable">
-  <div class="ui inverted labeled icon left inline vertical sidebar menu">
-    
+
+
+    </style>
+  </head>
+
+  
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
       
-        <a class="item" href="../../topic01-IntelliJ-JVM-and-IO/book-a-install/index.html">
-          Lab-01a
-        </a>
+        <a href="../index.html">  3: ArrayLists  </a>
       
-    
+    </header>
+    <div class="right tab-menu menu">
       
-        <a class="item" href="../../topic01-IntelliJ-JVM-and-IO/book-b/index.html">
-          Lab-01b
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic02-primitive-arrays/book-1-array-exercises/index.html">
-          Lab-02a
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic02-primitive-arrays/book-2-shop-v2.x/index.html">
-          Lab-02b
-        </a>
-      
-    
-      
-        <a class="active item" href="../../topic03-arraylists/book-1-arraylists/index.html">
+        <a class="item" data-tab="Lab-03">
           Lab-03
         </a>
       
-    
-      
-        <a class="item" href="../../topic04-menu-and-crud/book-1-loop-exercises/index.html">
-          Lab-04a
+        <a class="item" data-tab="01">
+          01
         </a>
       
-    
-      
-        <a class="item" href="../../topic04-menu-and-crud/book-2-crud/index.html">
-          Lab-04b
+        <a class="item" data-tab="02">
+          02
         </a>
       
-    
-      
-        <a class="item" href="../../topic05-persistence-xml-exceptions/book-xml-exceptions/index.html">
-          Lab-05
+        <a class="item" data-tab="03">
+          03
         </a>
       
-    
-      
-        <a class="item" href="../../topic06-collections-map-set/book/index.html">
-          Lab-06
+        <a class="item" data-tab="04">
+          04
         </a>
       
-    
-      
-        <a class="item" href="../../topic07-inher-polym/book/index.html">
-          Lab-07
+        <a class="item" data-tab="05">
+          05
         </a>
       
-    
-      
-        <a class="item" href="../../topic08-abstraction/book-1-abstraction/index.html">
-          Lab-08
+        <a class="item" data-tab="Exercises">
+          Exercises
         </a>
       
-    
-      
-        <a class="item" href="../../topic09-interfaces/book-interfaces/index.html">
-          Lab-09
+        <a class="item" data-tab="Solutions">
+          Solutions
         </a>
       
-    
-      
-        <a class="item" href="../../topic10-TDD-and-JUnit/book-tdd/index.html">
-          Lab-10
-        </a>
-      
-    
+    </div>
   </div>
-  <div class="pusher">
-    <div class="ui basic segment">
-      <br>
+
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
       
-      <div  class="ui tab segment lab" data-tab="Lab-03">
-        <h1>Objectives</h1>
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic00-assignments/book-a/index.html">Assignment1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic01-IntelliJ-JVM-and-IO/book-a-install/index.html">Lab-01a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic01-IntelliJ-JVM-and-IO/book-b/index.html">Lab-01b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic02-primitive-arrays/book-1-array-exercises/index.html">Lab-02a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic02-primitive-arrays/book-2-shop-v2.x/index.html">Lab-02b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic03-arraylists/book-1-arraylists/index.html">Lab-03 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic04-menu-and-crud/book-1-loop-exercises/index.html">Lab-04a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic04-menu-and-crud/book-2-crud/index.html">Lab-04b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic05-persistence-xml-exceptions/book-xml-exceptions/index.html">Lab-05 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic06-collections-map-set/book/index.html">Lab-06 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic07-inher-polym/book/index.html">Lab-07 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic08-abstraction/book-1-abstraction/index.html">Lab-08 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic09-interfaces/book-interfaces/index.html">Lab-09 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic10-TDD-and-JUnit/book-tdd/index.html">Lab-10 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic11-additional-material/book-1-shopv6/index.html">ShopV6.0 </a>
+          
+        
+      
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="Lab-03">
+            <h1>Objectives</h1>
 <p>Collections · Generic Classes · ArrayList · loops · for each loop · Menu Driven Apps</p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="01">
-        <h1>Starting ShopV3.0</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="01">
+            <h1>Starting ShopV3.0</h1>
 <p>In this step, you will use the ShopV2.2 solution as a starting point for Shop V3.0.  In this version:</p>
 <ul>
 <li>you will remove the primitive array and use an ArrayList instead.</li>
@@ -238,10 +275,10 @@ h3
 <h2>Test the code base</h2>
 <p>Run your version of ShopV3.0 to both test it and also familiarise yourself with the project. </p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="02">
-        <h1>Refactoring the Store Class</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="02">
+            <h1>Refactoring the Store Class</h1>
 <p>In this step, you will refactor (change) the Store class so that it no longer uses a primitive array, but uses an ArrayList instead.</p>
 <h2>Import the ArrayList class</h2>
 <p>To use the ArrayList in our Store class, we need to import it:</p>
@@ -363,10 +400,10 @@ h3
 <h2>isEmpty and isFull methods</h2>
 <p>There is no need for these methods when using ArrayLists, so you can simply delete them.</p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="03">
-        <h1>Refactoring the Driver Class</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="03">
+            <h1>Refactoring the Driver Class</h1>
 <p>In this step, you will refactor (change) the Driver class so that any changes we made to the public <strong>Interface</strong> of the Store class are reflected in this class.</p>
 <h2>Store Constructor</h2>
 <p>The only change that we made to the public <strong>Interface</strong> of the Store class is the Store Constructor.</p>
@@ -385,10 +422,10 @@ h3
 <p>Your output should look similar to this:</p>
 <p><img src="./img/06.PNG" alt=""></p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="04">
-        <h1>Enhancing the Menu</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="04">
+            <h1>Enhancing the Menu</h1>
 <p>At this stage, you should have refactored ShopV3.0 so that it uses an ArrayList instead of a primitive array.  If you had difficulty with it, <a href="./archives/ShopV3.0-InterimSolution.zip">here is an interim solution</a> that you can use for the rest of this lab.</p>
 <p>You will notice in our code that we are still asking the user how many products they want to add:</p>
 <p><img src="./img/06.PNG" alt=""></p>
@@ -460,10 +497,10 @@ h3
 <p>Test the menu with some of your own products and see if you can identify any bugs.  If you come across any, try fix them.</p>
 <p>Before moving onto the next step, it is a good idea to familiarise yourself with the code in both the Store and the Driver class.  Note that we made no changes to the Product class. </p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="05">
-        <h1>Formatting decimal output</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="05">
+            <h1>Formatting decimal output</h1>
 <p>Did you notice that the average product price is not limited to two decimal places?</p>
 <p><img src="./img/08.PNG" alt="Average product price"></p>
 <h2>toTwoDecimalPlaces</h2>
@@ -502,10 +539,10 @@ h3
     }</code></pre>
 <p>Make this change and test your app to make sure your result is truncated to two decimal places (note:  this method does not round up/down, it simply truncates).</p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="Exercises">
-        <h1>Exercises</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Exercises">
+            <h1>Exercises</h1>
 <p>Over the next few weeks, we will use the knowledge we glean from the <strong>Shop</strong> project to build a Menu Driven <strong>DVDLibrary</strong> app.  </p>
 <p>Today, you will work on Phase 1 of this DVDLibrary application; it presents the user with a simple menu for adding and listing DVD titles.</p>
 <h1>Menu Driven DVD app - phase 1</h1>
@@ -603,68 +640,90 @@ h3
 <p>Test by adding a series of DVDs and listing them.  </p>
 <p>Also try listing the DVDs when no DVDs have been entered (you can test this by restarting the application to clear any existing DVDs).</p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="Solutions">
-        <h1>Solutions</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Solutions">
+            <h1>Solutions</h1>
 <p><a href="archives/ShopV2.1.zip">ShopV2.1 from the previous lab</a></p>
 <p><a href="archives/ShopV2.2.zip">ShopV2.2 from the previous lab</a></p>
 <p><a href="archives/ShopV3.0-InterimSolution.zip">ShopV3.0-InterimSolution</a></p>
 <p><a href="archives/ShopV3.0.zip">ShopV3.0</a></p>
 <p><a href="archives/DVDLibraryV1.0.zip">Exercise Solution - DVDLibraryV1.0</a></p>
 
-      </div>
-     
-    </div>
-  </div>
-</div>
-  <div class="ui bottom fixed borderless right menu">
-    <div class="ui right tiny menu">
-      <div class="ui mini message segment">
-        .
-        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
-            target="_blank">Creative Commons License
-        </a>
+          </div>
+        
       </div>
     </div>
   </div>
 
-    <footer>
 
-    </footer>
-    <script>
-      $(document).ready(function () {
+  <br>
+  <script>
+    $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+    $(document).ready(function() {
   $('img').addClass('ui image');
+
   $('.ui.embed').embed();
 
   const $images = $('.lab img');
-  jQuery.each($images, function (i) {
-    if (($images[i].alt).length > 0) {
-      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
       $($images[i]).wrap(divImg);
-      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
       divLabel.append($images[i].alt);
       $(divLabel).insertBefore($images[i]);
     }
   });
 
-  $('.ui.embed').embed();
-
-  $('.ui.menu .item')
-      .tab({
-        history: true,
-        historyType: 'hash',
-      });
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
 
   $('.popup').popup();
 
   $('.ui.sidebar')
-      .sidebar({ context: $('.pushable') })
-      .sidebar('setting', 'transition', 'slide out')
-      .sidebar('attach events', '#toc');
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
 });
 
-    </script>
+  </script>
+
+
+
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right small menu">
+      <div class="ui tiny basic message segment">
+         Powered by <a href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a> 
+      </div>
+    </div>
+  </div>
+
   </body>
 
- </html>
+</html>

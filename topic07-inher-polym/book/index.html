@@ -1,227 +1,264 @@
- <!DOCTYPE html>
- <html>
-   <head>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
 
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-     
-
-     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
-
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
-     <script>hljs.initHighlightingOnLoad();</script>
-
-     
-
-     <style>
-       
-
-body 
-{
+body {
   font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
 }
 
-figcaption
-{
-  margin-bottom: 20px;
+p {
+  margin: 0.5em;
 }
 
-.vertical-align
-{
-  display: flex;
-  align-items: center;
-}
-
-
-
-     </style>
-
-   </head>
-
-  <body>
-    
-
-<style>
-  
-
-code
-{
+pre code {
   font-family: "Monaco";
-  font-size: 110%;
+  font-size: 100%;
 }
 
-img
-{
-  padding:1px;
-  border:1px solid black;
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
 }
 
-h1
-{
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
   font-style:italic;
   font-size:130%;
-  border-bottom: thin solid black;
 }
-h2
-{
+
+h2 {
   font-size:110%;
-  border-bottom: thin solid black;
 }
-h3
-{
+
+h3 {
   font-size:100%;
-  border-bottom: thin solid black;
 }
 
 
 
-</style>
+      
 
-<div class="ui fixed top pointing inverted menu labmenu">
-  <header class="header item">
-    <i id="toc" class="sitemap icon"></i>
-    <a href="../index.html">
-       7: Inheritance and Polymorphism
-    </a>
-  </header>
-  <div class="right tab-menu menu">
-    
-    <a class="item" data-tab="Lab-07">
-      Lab-07
-    </a>
-    
-    <a class="item" data-tab="V1">
-      V1
-    </a>
-    
-    <a class="item" data-tab="V2">
-      V2
-    </a>
-    
-    <a class="item" data-tab="V3">
-      V3
-    </a>
-    
-    <a class="item" data-tab="V4">
-      V4
-    </a>
-    
-    <a class="item" data-tab="Exercises">
-      Exercises
-    </a>
-    
-    <a class="item" data-tab="Solutions">
-      Solutions
-    </a>
-    
-    <a class="item" href="../../index.html">
-      <i class="home icon"></i>
-    </a>
-  </div>
-</div>
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
 
-<div class="ui segment pushable">
-  <div class="ui inverted labeled icon left inline vertical sidebar menu">
-    
+
+
+    </style>
+  </head>
+
+  
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
       
-        <a class="item" href="../../topic01-IntelliJ-JVM-and-IO/book-a-install/index.html">
-          Lab-01a
-        </a>
+        <a href="../index.html">  7: Inheritance and Polymorphism  </a>
       
-    
+    </header>
+    <div class="right tab-menu menu">
       
-        <a class="item" href="../../topic01-IntelliJ-JVM-and-IO/book-b/index.html">
-          Lab-01b
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic02-primitive-arrays/book-1-array-exercises/index.html">
-          Lab-02a
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic02-primitive-arrays/book-2-shop-v2.x/index.html">
-          Lab-02b
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic03-arraylists/book-1-arraylists/index.html">
-          Lab-03
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic04-menu-and-crud/book-1-loop-exercises/index.html">
-          Lab-04a
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic04-menu-and-crud/book-2-crud/index.html">
-          Lab-04b
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic05-persistence-xml-exceptions/book-xml-exceptions/index.html">
-          Lab-05
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic06-collections-map-set/book/index.html">
-          Lab-06
-        </a>
-      
-    
-      
-        <a class="active item" href="../../topic07-inher-polym/book/index.html">
+        <a class="item" data-tab="Lab-07">
           Lab-07
         </a>
       
-    
-      
-        <a class="item" href="../../topic08-abstraction/book-1-abstraction/index.html">
-          Lab-08
+        <a class="item" data-tab="V1">
+          V1
         </a>
       
-    
-      
-        <a class="item" href="../../topic09-interfaces/book-interfaces/index.html">
-          Lab-09
+        <a class="item" data-tab="V2">
+          V2
         </a>
       
-    
-      
-        <a class="item" href="../../topic10-TDD-and-JUnit/book-tdd/index.html">
-          Lab-10
+        <a class="item" data-tab="V3">
+          V3
         </a>
       
-    
+        <a class="item" data-tab="V4">
+          V4
+        </a>
+      
+        <a class="item" data-tab="Exercises">
+          Exercises
+        </a>
+      
+        <a class="item" data-tab="Solutions">
+          Solutions
+        </a>
+      
+    </div>
   </div>
-  <div class="pusher">
-    <div class="ui basic segment">
-      <br>
+
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
       
-      <div  class="ui tab segment lab" data-tab="Lab-07">
-        <h1>Objectives</h1>
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic00-assignments/book-a/index.html">Assignment1 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic01-IntelliJ-JVM-and-IO/book-a-install/index.html">Lab-01a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic01-IntelliJ-JVM-and-IO/book-b/index.html">Lab-01b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic02-primitive-arrays/book-1-array-exercises/index.html">Lab-02a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic02-primitive-arrays/book-2-shop-v2.x/index.html">Lab-02b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic03-arraylists/book-1-arraylists/index.html">Lab-03 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic04-menu-and-crud/book-1-loop-exercises/index.html">Lab-04a </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic04-menu-and-crud/book-2-crud/index.html">Lab-04b </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic05-persistence-xml-exceptions/book-xml-exceptions/index.html">Lab-05 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic06-collections-map-set/book/index.html">Lab-06 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic07-inher-polym/book/index.html">Lab-07 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic08-abstraction/book-1-abstraction/index.html">Lab-08 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic09-interfaces/book-interfaces/index.html">Lab-09 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic10-TDD-and-JUnit/book-tdd/index.html">Lab-10 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic11-additional-material/book-1-shopv6/index.html">ShopV6.0 </a>
+          
+        
+      
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="Lab-07">
+            <h1>Objectives</h1>
 <p>Social Network app · Inheritance · Polymorphism · Overriding</p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="V1">
-        <h1>Network-V1</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="V1">
+            <h1>Network-V1</h1>
 <p>In this step, you will familiarise yourself with the original version of the Network example (without inheritance).</p>
 <h2>Creating Network V1 Project</h2>
 <p>In IntelliJ, create a new project called Network-V1.</p>
@@ -265,10 +302,10 @@ order of input.</p>
 <h2>Solution</h2>
 <p>The solution to network-v1 is <a href="archives/network-solution-v1.zip">here</a>.</p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="V2">
-        <h1>Network-V2</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="V2">
+            <h1>Network-V2</h1>
 <p>In this step, you will familiarise yourself with the second version of the Network example (with inheritance).  </p>
 <h2>Creating Network V2 Project</h2>
 <p>In IntelliJ, create a new project called Network-V2.</p>
@@ -305,10 +342,10 @@ order of input.</p>
 <h2>Solution</h2>
 <p>The solution to network-v2 is <a href="archives/network-solution-v2.zip">here</a>.</p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="V3">
-        <h1>Network-V3</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="V3">
+            <h1>Network-V3</h1>
 <p>In this step, you will create version 3 of the Network system.  This version will have a menu that will control the NewsFeed class.</p>
 <h2>Creating Network V3 Project</h2>
 <p>In IntelliJ, create a new project called Network-V3.</p>
@@ -344,10 +381,10 @@ order of input.</p>
 <h2>Solution</h2>
 <p>The solution to network-v3 is <a href="archives/network-solution-v3.zip">here</a>.</p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="V4">
-        <h1>Network-V4</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="V4">
+            <h1>Network-V4</h1>
 <p>In this step, you will build on v3 that you wrote in the previous step.</p>
 <h2>Creating the Network-V4 project</h2>
 <p>Create a new project called Network-V4 and copy the src files from <em>either</em> your solution to network-v3 <em>or</em> our solution of <a href="archives/Network-V3.zip">Network-V3</a> into it.</p>
@@ -363,10 +400,10 @@ order of input.</p>
 <h2>Solution</h2>
 <p>The solution is available <a href="archives/network-solution-v4.zip">here</a></p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="Exercises">
-        <h1>Exercises</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Exercises">
+            <h1>Exercises</h1>
 <p>These exercises are based on the exercises in Chapter 8 of Objects First with Java - A Practical Introduction Using Bluej, by David Barnes &amp; Michael Kolling).</p>
 <h2>Exercise 1</h2>
 <p>Order the following items into an inheritance hierarchy : </p>
@@ -428,10 +465,10 @@ t1 = s1;
 s1 = phd1; 
 phd1 = s1;</code></pre>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="Solutions">
-        <h1>Solutions</h1>
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Solutions">
+            <h1>Solutions</h1>
 <h2>Exercise 1 Solution</h2>
 <p>The question was...order the following items into an inheritance hierarchy : </p>
 <ul>
@@ -498,58 +535,80 @@ Student s1 = new Student ();</code></pre>
                // We are going against the direction of the arrows in the 
                // inheritance diagram.</code></pre>
 
-      </div>
-     
-    </div>
-  </div>
-</div>
-  <div class="ui bottom fixed borderless right menu">
-    <div class="ui right tiny menu">
-      <div class="ui mini message segment">
-        .
-        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
-            target="_blank">Creative Commons License
-        </a>
+          </div>
+        
       </div>
     </div>
   </div>
 
-    <footer>
 
-    </footer>
-    <script>
-      $(document).ready(function () {
+  <br>
+  <script>
+    $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+    $(document).ready(function() {
   $('img').addClass('ui image');
+
   $('.ui.embed').embed();
 
   const $images = $('.lab img');
-  jQuery.each($images, function (i) {
-    if (($images[i].alt).length > 0) {
-      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
       $($images[i]).wrap(divImg);
-      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
       divLabel.append($images[i].alt);
       $(divLabel).insertBefore($images[i]);
     }
   });
 
-  $('.ui.embed').embed();
-
-  $('.ui.menu .item')
-      .tab({
-        history: true,
-        historyType: 'hash',
-      });
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
 
   $('.popup').popup();
 
   $('.ui.sidebar')
-      .sidebar({ context: $('.pushable') })
-      .sidebar('setting', 'transition', 'slide out')
-      .sidebar('attach events', '#toc');
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
 });
 
-    </script>
+  </script>
+
+
+
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right small menu">
+      <div class="ui tiny basic message segment">
+         Powered by <a href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a> 
+      </div>
+    </div>
+  </div>
+
   </body>
 
- </html>
+</html>

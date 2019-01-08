@@ -1,461 +1,2277 @@
- <!DOCTYPE html>
- <html>
-   <head>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.23/css/uikit.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.23/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.23/js/uikit-icons.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+      
 
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-     
-
-     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
-
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
-     <script>hljs.initHighlightingOnLoad();</script>
-
-     
-
-     <style>
-       
-
-body 
-{
-  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+html, body {
+  height: 100%;
+  margin: 0;
 }
-
-figcaption
-{
-  margin-bottom: 20px;
-}
-
-.vertical-align
-{
+.wrapper {
+  height: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
 }
 
 
 
-     </style>
-
-   </head>
-
-  <body>
-    
-
+    </style>
+  </head>
+  <body class="uk-background-muted">
+    <div class="wrapper">
+      <div class="content">
+        <div style="height:1000px;">
+          
+  
+  
+  <div class="uk-offcanvas-content">
+    <div id="offcanvas-usage" uk-offcanvas>
+      <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        
+          
+            <ul class="uk-nav">
+              <li class="uk-parent">
+                <a class="item" href="http://2018-2019.github.io/prog-fund-2//topic00-assignments/index.html">
+                  
+  <i class="fas fa-sitemap " style="color:#009688"> </i>
+ Assignments  
+                </a>
+                <ul class="uk-nav-sub">
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic00-assignments/talk-1-assignment-2-pbl/a-prog-fund-2-assignment-2-pbl.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Assignment 2 - Problem-based Learning 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic00-assignments/talk-2-assignment-2-game/b-prog-fund-2-assignment-2-games.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Assignment 2 - The Game 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic00-assignments/talk-3-assignment-3-repeat/a-prog-fund-2-assignment-3-repeat.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Assignment 3 - Repeat Assignment 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic00-assignments/book-a/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Assignment1
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic00-assignments/archive-resources-for-pbl/pbl-resources.zip">
+  <i class="fas fa-file-archive " style="color:#453F78"> </i>
+PBL Resources 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                </ul>
+              </li>
+            </ul>
+          
+        
+          
+            <ul class="uk-nav">
+              <li class="uk-parent">
+                <a class="item" href="http://2018-2019.github.io/prog-fund-2//topic01-IntelliJ-JVM-and-IO/index.html">
+                  
+  <i class="fas fa-sitemap " style="color:#009688"> </i>
+1: IntelliJ and Basic I/O 
+                </a>
+                <ul class="uk-nav-sub">
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic01-IntelliJ-JVM-and-IO/talk-1-introduction-jvm/a-introduction-jvm.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Introduction 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic01-IntelliJ-JVM-and-IO/talk-2-oo-recap/b-oo-recap.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+OO Recap 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic01-IntelliJ-JVM-and-IO/talk-3-scanner-io/e-scanner-io.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Scanner IO 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic01-IntelliJ-JVM-and-IO/book-a-install/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-01a
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic01-IntelliJ-JVM-and-IO/book-b/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-01b
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic01-IntelliJ-JVM-and-IO/reference-1-lab-intro/a-lab-intro.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Lab Introduction 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                </ul>
+              </li>
+            </ul>
+          
+        
+          
+            <ul class="uk-nav">
+              <li class="uk-parent">
+                <a class="item" href="http://2018-2019.github.io/prog-fund-2//topic02-primitive-arrays/index.html">
+                  
+  <i class="fas fa-sitemap " style="color:#009688"> </i>
+ 2: Primitive Arrays 
+                </a>
+                <ul class="uk-nav-sub">
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic02-primitive-arrays/talk-1-array-recap/a-array-recap.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Array Recap 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic02-primitive-arrays/talk-2-array-product/a-array-product.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+ShopV2.0 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic02-primitive-arrays/book-1-array-exercises/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-02a
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic02-primitive-arrays/book-2-shop-v2.x/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-02b
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic02-primitive-arrays/reference-1-basic-menu/c-basic-menu.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Lab Introduction 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                </ul>
+              </li>
+            </ul>
+          
+        
+          
+            <ul class="uk-nav">
+              <li class="uk-parent">
+                <a class="item" href="http://2018-2019.github.io/prog-fund-2//topic03-arraylists/index.html">
+                  
+  <i class="fas fa-sitemap " style="color:#009688"> </i>
+ 3: ArrayLists 
+                </a>
+                <ul class="uk-nav-sub">
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic03-arraylists/talk-1-intro-to-arraylists/a-intro-to-arraylists.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Intro to ArrayList 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic03-arraylists/talk-2-more-on-arraylists/b-more-on-arraylists.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+More on ArrayList 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic03-arraylists/book-1-arraylists/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-03
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                </ul>
+              </li>
+            </ul>
+          
+        
+          
+            <ul class="uk-nav">
+              <li class="uk-parent">
+                <a class="item" href="http://2018-2019.github.io/prog-fund-2//topic04-menu-and-crud/index.html">
+                  
+  <i class="fas fa-sitemap " style="color:#009688"> </i>
+ 4: Menu Driven Apps and Persistence 
+                </a>
+                <ul class="uk-nav-sub">
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic04-menu-and-crud/talk-1-menu-driven-systems/a-menu-driven-systems.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Menu Driven Systems 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic04-menu-and-crud/talk-2-CRUD/b-CRUD-process.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+CRUD Process 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic04-menu-and-crud/book-1-loop-exercises/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-04a
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic04-menu-and-crud/book-2-crud/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-04b
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic04-menu-and-crud/reference-1-debugger/c-debugging.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+ Debugging 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                </ul>
+              </li>
+            </ul>
+          
+        
+          
+            <ul class="uk-nav">
+              <li class="uk-parent">
+                <a class="item" href="http://2018-2019.github.io/prog-fund-2//topic05-persistence-xml-exceptions/index.html">
+                  
+  <i class="fas fa-sitemap " style="color:#009688"> </i>
+ 5: Persistence (XML & Exceptions) 
+                </a>
+                <ul class="uk-nav-sub">
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic05-persistence-xml-exceptions/talk-1-XML/a-XML.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Introduction to XML 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic05-persistence-xml-exceptions/talk-2-CRUD-XML/b-CRUD-XML.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+XML and Java 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic05-persistence-xml-exceptions/talk-3-exceptions/c-exceptions.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Exception Handling 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic05-persistence-xml-exceptions/talk-4-misc-concepts/d-misc-concepts.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Miscellaneous Concepts 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic05-persistence-xml-exceptions/book-xml-exceptions/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-05
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                </ul>
+              </li>
+            </ul>
+          
+        
+          
+            <ul class="uk-nav">
+              <li class="uk-parent">
+                <a class="item" href="http://2018-2019.github.io/prog-fund-2//topic06-collections-map-set/index.html">
+                  
+  <i class="fas fa-sitemap " style="color:#009688"> </i>
+ 6: Collections (Map and Set) 
+                </a>
+                <ul class="uk-nav-sub">
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic06-collections-map-set/talk-1-tech-support-v1/a-tech-support-V1.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Tech Support System V1 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic06-collections-map-set/talk-2-tech-support-v2/b-tech-support-V2.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Tech Support System V2 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic06-collections-map-set/talk-3-tech-support-v3/c-tech-support-V3.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Tech Support System V3 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic06-collections-map-set/book/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-06
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                </ul>
+              </li>
+            </ul>
+          
+        
+          
+            <ul class="uk-nav">
+              <li class="uk-parent">
+                <a class="item" href="http://2018-2019.github.io/prog-fund-2//topic07-inher-polym/index.html">
+                  
+  <i class="fas fa-sitemap " style="color:#009688"> </i>
+ 7: Inheritance and Polymorphism 
+                </a>
+                <ul class="uk-nav-sub">
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic07-inher-polym/talk-1-inheritance/a-inheritance.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+ Inheritance 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic07-inher-polym/talk-2-polymorphism/b-exploring-polymorphism.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+ Exploring Polymorphism 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic07-inher-polym/book/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-07
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                </ul>
+              </li>
+            </ul>
+          
+        
+          
+            <ul class="uk-nav">
+              <li class="uk-parent">
+                <a class="item" href="http://2018-2019.github.io/prog-fund-2//topic08-abstraction/index.html">
+                  
+  <i class="fas fa-sitemap " style="color:#009688"> </i>
+ 8: Abstraction 
+                </a>
+                <ul class="uk-nav-sub">
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic08-abstraction/talk-1-abstraction/a-prog-fund-2-abstraction.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+ Abstraction 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic08-abstraction/book-1-abstraction/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-08
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                </ul>
+              </li>
+            </ul>
+          
+        
+          
+            <ul class="uk-nav">
+              <li class="uk-parent">
+                <a class="item" href="http://2018-2019.github.io/prog-fund-2//topic09-interfaces/index.html">
+                  
+  <i class="fas fa-sitemap " style="color:#009688"> </i>
+ 9: Interfaces 
+                </a>
+                <ul class="uk-nav-sub">
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic09-interfaces/talk-1-deadly-diamond-of-death/a-prog-fund-2-deadly-diamond-of-death .pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Deadly Diamond of Death 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic09-interfaces/talk-2-intro-to-interfaces/b-prog-fund-2-intro-to-interfaces.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Introduction to Interfaces 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic09-interfaces/talk-3-more-on-interfaces/c-prog-fund-2-more-on-interfaces.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+More on Interfaces 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic09-interfaces/book-interfaces/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-09
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                </ul>
+              </li>
+            </ul>
+          
+        
+          
+            <ul class="uk-nav">
+              <li class="uk-parent">
+                <a class="item" href="http://2018-2019.github.io/prog-fund-2//topic10-TDD-and-JUnit/index.html">
+                  
+  <i class="fas fa-sitemap " style="color:#009688"> </i>
+ 10: TDD and JUnit 
+                </a>
+                <ul class="uk-nav-sub">
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic10-TDD-and-JUnit/talk-1-tdd-intro/a-prog-fund-2-TDD-intro.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Test Driven Development (TDD) 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic10-TDD-and-JUnit/talk-2-junit-dvd-class/b-prog-fund-2-junit-dvdtest.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+JUnit and DVD.java 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic10-TDD-and-JUnit/talk-3-junit-terminology/c-prog-fund-2-junit-terminology.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+JUnit Terminology 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic10-TDD-and-JUnit/talk-4-planning-tests/d-prog-fund-2-junit-planning-tests.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Planning Testing 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic10-TDD-and-JUnit/talk-5-junit-library-class/e-prog-fund-2-junit-library-class.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+Completing DVD app testing 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic10-TDD-and-JUnit/book-tdd/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+Lab-10
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                </ul>
+              </li>
+            </ul>
+          
+        
+          
+            <ul class="uk-nav">
+              <li class="uk-parent">
+                <a class="item" href="http://2018-2019.github.io/prog-fund-2//topic11-additional-material/index.html">
+                  
+  <i class="fas fa-sitemap " style="color:#009688"> </i>
+Supplementary Materials 
+                </a>
+                <ul class="uk-nav-sub">
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic11-additional-material/talk-1-packages-utilities/a-packages-utilities.pdf">
+  <i class="fas fa-object-group " style="color:#009688"> </i>
+ Packages, Utilities and Parsing 
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                    
+                      <li>
+                        
+                          
+                            
+                              <a class="item"
+                                 href="http://2018-2019.github.io/prog-fund-2//topic11-additional-material/book-1-shopv6/index.html">
+  <i class="fas fa-flask " style="color:#00BCD4"> </i>
+ShopV6.0
+                                
+                              </a>
+                            
+                          
+                        
+                      </li>
+                    
+                  
+                </ul>
+              </li>
+            </ul>
+          
+        
+      </div>
+    </div>
+  </div>
 
   
+  <div class="uk-flex uk-flex-center uk-flex-middle uk-text-center uk-padding-small" uk-grid>
+    
+  <div class="uk-padding">
+    <a href="#offcanvas-usage" uk-toggle title="Table of Contents" pos="bottom" uk-tooltip>
+      
+  <i class="fas fa-bars fa-3x" style="color:"> </i>
 
-
-
-
-
-<header class="ui middle aligned center aligned stackable grid segment">
-
-  <a class="ui blue left corner label">
-  <div id="showTOC" class="popup" data-content="Reveal TOC">
-    <i id="toc" class="sitemap big  icon"></i>
+    </a>
   </div>
-</a>
 
-  <div class="seven wide center aligned column">
-    <h2 class="headder">  Programming Fundamentals 2</h2>
-    <p> All Labs in the Course </p>
+    
+  <div class="uk-width-1-2@m  uk-card uk-card-default uk-padding-small">
+    <div uk-grid>
+      <div class="uk-width-1-5@m">
+        
+          
+  
+    <i class=" fa-4x" style="color:"></i>
+  
+
+        
+      </div>
+      <div class="uk-width-expand@m uk-text-left">
+        <h2>  Programming Fundamentals 2  </h2>
+        <div class="uk-text-muted uk-text-small">
+          
+            All labs's in Module
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="uk-padding">
+    
+      
+  <li>
+    <a href="index.html" title="To the top level Topics for this Module" pos="bottom" uk-tooltip> 
+  <i class="fas fa-home fa-4x" style="color:"> </i>
+ </a>
+  </li>
+
+      
+  </div>
+
+    
+  
+    
+  
+
+    
+      
+
+  
+    <div class="uk-card uk-card-default uk-padding-small">
+      <ul class="uk-iconnav">
+        
+          
+  
+    
+      
+      
+  <li>
+    <a href="./talkwall.html" title="All slides's in module" pos="bottom" uk-tooltip> 
+  <i class="fas fa-object-group fa-2x" style="color:#009688"> </i>
+ </a>
+  </li>
+
+    
+  
+    
+      
+      
+  <li>
+    <a href="./labwall.html" title="All labs's in module" pos="bottom" uk-tooltip> 
+  <i class="fas fa-flask fa-2x" style="color:#00BCD4"> </i>
+ </a>
+  </li>
+
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      
+  <li>
+    <a href="./archivewall.html" title="All archives's in module" pos="bottom" uk-tooltip> 
+  <i class="fas fa-file-archive fa-2x" style="color:#453F78"> </i>
+ </a>
+  </li>
+
+    
+  
+
+        
+        
+      </ul>
+    </div>
+  
+
+    
+    
+  
+
   </div>
 
   
-<div class="two wide column sitemap">
-  <div class="popup" data-content="To the top level Topics for this Module...">
-    <a href="index.html"> <i class="huge home icon"></i> Module </a>
-  </div>
-</div>
+  <div class="uk-container uk-padding-small">
+    <div class="uk-child-width-1-4@s uk-flex uk-flex-center" uk-grid uk-height-match="target: > div > .uk-card">
+      
+        <div>
+          
+            
+              
 
   
-<div class="four wide column">
-  <div class="ui center aligned mini message segment">
-    .
-    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
-        target="_blank">Creative Commons License
-    </a>
+  
+
+  <div class="uk-card uk-card-default 
+  
+    uk-card-hover
+  
+ uk-card-small uk-text-center uk-text-baseline uk-animation-fade">
+    
+  
+    
+      
+      
+    
+    <a href=topic00-assignments/book-a/index.html>
+  
+
+    
+  <div class="uk-card-header">
+    <div uk-grid>
+      <div class="uk-width-expand@m">
+        <h3> Assignment1</h3>
+      </div>
+      <div class="uk-width-1-4@m">
+        
+  <i class="fas fa-flask fa-2x" style="color:#00BCD4"> </i>
+
+        
+      </div>
+    </div>
   </div>
-</div>
+
+    
+  <div class="uk-card-body">
+    
+      <img src="topic00-assignments/book-a/img/main.png">
+    
+  </div>
+
+    
+  
+    </a>
+  
+
+    
+  
+
+    
+  
+    <div class="uk-card-footer">
+      <p> <p>Based on materials contained in the  first 5 weeks of slide decks and labs.  It is worth 50% of your overall grade for the module.</p>
+</p>
+    </div>
+  
+
+    
+  
+
+  </div>
+
+
+
+            
+          
+        </div>
+      
+        <div>
+          
+            
+              
 
   
-<div class="ui two wide right aligned column">
-  <div class="ui left aligned middle aligned very basic grid">
-    <div class="row">
-      <div class="popup" data-content="All Slides in Course">
-        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+  
+
+  <div class="uk-card uk-card-default 
+  
+    uk-card-hover
+  
+ uk-card-small uk-text-center uk-text-baseline uk-animation-fade">
+    
+  
+    
+      
+      
+    
+    <a href=topic01-IntelliJ-JVM-and-IO/book-a-install/index.html>
+  
+
+    
+  <div class="uk-card-header">
+    <div uk-grid>
+      <div class="uk-width-expand@m">
+        <h3> Lab-01a</h3>
       </div>
-    </div>
-    <div class="row">
-      <div class="popup" data-content="All Labs in Course">
-        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-</header>
-
-
-
-<div class="ui bottom attached segment pushable">
-  <div class="ui inverted labeled icon left inline vertical sidebar menu">
-    
-    <a class="item" href="topic01-IntelliJ-JVM-and-IO/book-a-install/index.html">
-      Lab-01a
-    </a>
-    
-    <a class="item" href="topic01-IntelliJ-JVM-and-IO/book-b/index.html">
-      Lab-01b
-    </a>
-    
-    <a class="item" href="topic02-primitive-arrays/book-1-array-exercises/index.html">
-      Lab-02a
-    </a>
-    
-    <a class="item" href="topic02-primitive-arrays/book-2-shop-v2.x/index.html">
-      Lab-02b
-    </a>
-    
-    <a class="item" href="topic03-arraylists/book-1-arraylists/index.html">
-      Lab-03
-    </a>
-    
-    <a class="item" href="topic04-menu-and-crud/book-1-loop-exercises/index.html">
-      Lab-04a
-    </a>
-    
-    <a class="item" href="topic04-menu-and-crud/book-2-crud/index.html">
-      Lab-04b
-    </a>
-    
-    <a class="item" href="topic05-persistence-xml-exceptions/book-xml-exceptions/index.html">
-      Lab-05
-    </a>
-    
-    <a class="item" href="topic06-collections-map-set/book/index.html">
-      Lab-06
-    </a>
-    
-    <a class="item" href="topic07-inher-polym/book/index.html">
-      Lab-07
-    </a>
-    
-    <a class="item" href="topic08-abstraction/book-1-abstraction/index.html">
-      Lab-08
-    </a>
-    
-    <a class="item" href="topic09-interfaces/book-interfaces/index.html">
-      Lab-09
-    </a>
-    
-    <a class="item" href="topic10-TDD-and-JUnit/book-tdd/index.html">
-      Lab-10
-    </a>
-    
-  </div>
-  <div class="pusher">
-    <div class="ui basic segment">
-      <div class="ui four doubling stackable cards">
+      <div class="uk-width-1-4@m">
         
-        
-  <a class="ui raised link card" href="topic01-IntelliJ-JVM-and-IO/book-a-install/index.html">
-    <div class="content">
-        <div class="right floated meta"> <i class="lab large icon"></i></div>
-        <div class="header"> Lab-01a </div>
-    </div>
-    <div class="image">
-      <img class="ui bordered rounded image" src="topic01-IntelliJ-JVM-and-IO/book-a-install/img/main.png">
-    </div>
-    <div class="content">
-      <div class="description">
-         <p>Install JDK 10 + IntelliJ Idea (on own computer)</p>
-
-      </div>
-    </div>
-    
-  </a>
-
-        
-        
-  <a class="ui raised link card" href="topic01-IntelliJ-JVM-and-IO/book-b/index.html">
-    <div class="content">
-        <div class="right floated meta"> <i class="lab large icon"></i></div>
-        <div class="header"> Lab-01b </div>
-    </div>
-    <div class="image">
-      <img class="ui bordered rounded image" src="topic01-IntelliJ-JVM-and-IO/book-b/img/main.png">
-    </div>
-    <div class="content">
-      <div class="description">
-         <p>IntelliJ · Java Virtual Machine (JVM) · main method · Scanner · OO recap</p>
-
-      </div>
-    </div>
-    
-  </a>
-
-        
-        
-  <a class="ui raised link card" href="topic02-primitive-arrays/book-1-array-exercises/index.html">
-    <div class="content">
-        <div class="right floated meta"> <i class="lab large icon"></i></div>
-        <div class="header"> Lab-02a </div>
-    </div>
-    <div class="image">
-      <img class="ui bordered rounded image" src="topic02-primitive-arrays/book-1-array-exercises/img/main.png">
-    </div>
-    <div class="content">
-      <div class="description">
-         <p>Scanner · primitive arrays · counter-controlled loops</p>
-
-      </div>
-    </div>
-    
-  </a>
-
-        
-        
-  <a class="ui raised link card" href="topic02-primitive-arrays/book-2-shop-v2.x/index.html">
-    <div class="content">
-        <div class="right floated meta"> <i class="lab large icon"></i></div>
-        <div class="header"> Lab-02b </div>
-    </div>
-    <div class="image">
-      <img class="ui bordered rounded image" src="topic02-primitive-arrays/book-2-shop-v2.x/img/main.png">
-    </div>
-    <div class="content">
-      <div class="description">
-         <p>ShopV2.0 (primitive array) · ShopV2.1 (methods operating on arrays) · ShopV2.2 (console menu system) </p>
-
-      </div>
-    </div>
-    
-  </a>
-
-        
-        
-  <a class="ui raised link card" href="topic03-arraylists/book-1-arraylists/index.html">
-    <div class="content">
-        <div class="right floated meta"> <i class="lab large icon"></i></div>
-        <div class="header"> Lab-03 </div>
-    </div>
-    <div class="image">
-      <img class="ui bordered rounded image" src="topic03-arraylists/book-1-arraylists/img/main.png">
-    </div>
-    <div class="content">
-      <div class="description">
-         <p>Collections · Generic Classes · ArrayList · loops · for each loop · Menu Driven Apps</p>
-
-      </div>
-    </div>
-    
-  </a>
-
-        
-        
-  <a class="ui raised link card" href="topic04-menu-and-crud/book-1-loop-exercises/index.html">
-    <div class="content">
-        <div class="right floated meta"> <i class="lab large icon"></i></div>
-        <div class="header"> Lab-04a </div>
-    </div>
-    <div class="image">
-      <img class="ui bordered rounded image" src="topic04-menu-and-crud/book-1-loop-exercises/img/main.png">
-    </div>
-    <div class="content">
-      <div class="description">
-         <p>ArrayList · loops</p>
-
-      </div>
-    </div>
-    
-  </a>
-
-        
-        
-  <a class="ui raised link card" href="topic04-menu-and-crud/book-2-crud/index.html">
-    <div class="content">
-        <div class="right floated meta"> <i class="lab large icon"></i></div>
-        <div class="header"> Lab-04b </div>
-    </div>
-    <div class="image">
-      <img class="ui bordered rounded image" src="topic04-menu-and-crud/book-2-crud/img/main.png">
-    </div>
-    <div class="content">
-      <div class="description">
-         <p>CRUD · ShopV4.0 · DVDLibraryV2.0 · Debugging</p>
-
-      </div>
-    </div>
-    
-  </a>
-
-        
-        
-  <a class="ui raised link card" href="topic05-persistence-xml-exceptions/book-xml-exceptions/index.html">
-    <div class="content">
-        <div class="right floated meta"> <i class="lab large icon"></i></div>
-        <div class="header"> Lab-05 </div>
-    </div>
-    <div class="image">
-      <img class="ui bordered rounded image" src="topic05-persistence-xml-exceptions/book-xml-exceptions/img/main.png">
-    </div>
-    <div class="content">
-      <div class="description">
-         <p>XML · Exception Handling · Validate User Input · ShopV5.0 · DVD3.0</p>
-
-      </div>
-    </div>
-    
-  </a>
-
-        
-        
-  <a class="ui raised link card" href="topic06-collections-map-set/book/index.html">
-    <div class="content">
-        <div class="right floated meta"> <i class="lab large icon"></i></div>
-        <div class="header"> Lab-06 </div>
-    </div>
-    <div class="image">
-      <img class="ui bordered rounded image" src="topic06-collections-map-set/book/img/main.png">
-    </div>
-    <div class="content">
-      <div class="description">
-         <p>ArrayList · HashMap · HashSet · Tokenise Strings · Random · Tech Support App </p>
-
-      </div>
-    </div>
-    
-  </a>
-
-        
-        
-  <a class="ui raised link card" href="topic07-inher-polym/book/index.html">
-    <div class="content">
-        <div class="right floated meta"> <i class="lab large icon"></i></div>
-        <div class="header"> Lab-07 </div>
-    </div>
-    <div class="image">
-      <img class="ui bordered rounded image" src="topic07-inher-polym/book/img/main.png">
-    </div>
-    <div class="content">
-      <div class="description">
-         <p>Social Network app · Inheritance · Polymorphism · Overriding</p>
-
-      </div>
-    </div>
-    
-  </a>
-
-        
-        
-  <a class="ui raised link card" href="topic08-abstraction/book-1-abstraction/index.html">
-    <div class="content">
-        <div class="right floated meta"> <i class="lab large icon"></i></div>
-        <div class="header"> Lab-08 </div>
-    </div>
-    <div class="image">
-      <img class="ui bordered rounded image" src="topic08-abstraction/book-1-abstraction/img/main.png">
-    </div>
-    <div class="content">
-      <div class="description">
-         <p>Social Network app · Abstraction</p>
-
-      </div>
-    </div>
-    
-  </a>
-
-        
-        
-  <a class="ui raised link card" href="topic09-interfaces/book-interfaces/index.html">
-    <div class="content">
-        <div class="right floated meta"> <i class="lab large icon"></i></div>
-        <div class="header"> Lab-09 </div>
-    </div>
-    <div class="image">
-      <img class="ui bordered rounded image" src="topic09-interfaces/book-interfaces/img/main.png">
-    </div>
-    <div class="content">
-      <div class="description">
-         <p>Abstraction · Interfaces · Social Network App · Interfaces and Collections</p>
-
-      </div>
-    </div>
-    
-  </a>
-
-        
-        
-  <a class="ui raised link card" href="topic10-TDD-and-JUnit/book-tdd/index.html">
-    <div class="content">
-        <div class="right floated meta"> <i class="lab large icon"></i></div>
-        <div class="header"> Lab-10 </div>
-    </div>
-    <div class="image">
-      <img class="ui bordered rounded image" src="topic10-TDD-and-JUnit/book-tdd/img/main.png">
-    </div>
-    <div class="content">
-      <div class="description">
-         <p>JUnit · Test Classes · Annotations · Automating Tests</p>
-
-      </div>
-    </div>
-    
-  </a>
+  <i class="fas fa-flask fa-2x" style="color:#00BCD4"> </i>
 
         
       </div>
     </div>
   </div>
-</div>
+
+    
+  <div class="uk-card-body">
+    
+      <img src="topic01-IntelliJ-JVM-and-IO/book-a-install/img/main.png">
+    
+  </div>
+
+    
+  
+    </a>
+  
+
+    
+  
+
+    
+  
+    <div class="uk-card-footer">
+      <p> <p>Install JDK 10 + IntelliJ Idea (on own computer)</p>
+</p>
+    </div>
+  
+
+    
+  
+
+  </div>
 
 
-    <footer>
 
-    </footer>
-    <script>
-      $(document).ready(function () {
-  $('img').addClass('ui image');
-  $('.ui.embed').embed();
+            
+          
+        </div>
+      
+        <div>
+          
+            
+              
 
-  const $images = $('.lab img');
-  jQuery.each($images, function (i) {
-    if (($images[i].alt).length > 0) {
-      const divImg = $(document.createElement('div')).addClass('ui basic segment');
-      $($images[i]).wrap(divImg);
-      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
-      divLabel.append($images[i].alt);
-      $(divLabel).insertBefore($images[i]);
-    }
-  });
+  
+  
 
-  $('.ui.embed').embed();
+  <div class="uk-card uk-card-default 
+  
+    uk-card-hover
+  
+ uk-card-small uk-text-center uk-text-baseline uk-animation-fade">
+    
+  
+    
+      
+      
+    
+    <a href=topic01-IntelliJ-JVM-and-IO/book-b/index.html>
+  
 
-  $('.ui.menu .item')
-      .tab({
-        history: true,
-        historyType: 'hash',
-      });
+    
+  <div class="uk-card-header">
+    <div uk-grid>
+      <div class="uk-width-expand@m">
+        <h3> Lab-01b</h3>
+      </div>
+      <div class="uk-width-1-4@m">
+        
+  <i class="fas fa-flask fa-2x" style="color:#00BCD4"> </i>
 
-  $('.popup').popup();
+        
+      </div>
+    </div>
+  </div>
 
-  $('.ui.sidebar')
-      .sidebar({ context: $('.pushable') })
-      .sidebar('setting', 'transition', 'slide out')
-      .sidebar('attach events', '#toc');
-});
+    
+  <div class="uk-card-body">
+    
+      <img src="topic01-IntelliJ-JVM-and-IO/book-b/img/main.png">
+    
+  </div>
 
-    </script>
+    
+  
+    </a>
+  
+
+    
+  
+
+    
+  
+    <div class="uk-card-footer">
+      <p> <p>IntelliJ · Java Virtual Machine (JVM) · main method · Scanner · OO recap</p>
+</p>
+    </div>
+  
+
+    
+  
+
+  </div>
+
+
+
+            
+          
+        </div>
+      
+        <div>
+          
+            
+              
+
+  
+  
+
+  <div class="uk-card uk-card-default 
+  
+    uk-card-hover
+  
+ uk-card-small uk-text-center uk-text-baseline uk-animation-fade">
+    
+  
+    
+      
+      
+    
+    <a href=topic02-primitive-arrays/book-1-array-exercises/index.html>
+  
+
+    
+  <div class="uk-card-header">
+    <div uk-grid>
+      <div class="uk-width-expand@m">
+        <h3> Lab-02a</h3>
+      </div>
+      <div class="uk-width-1-4@m">
+        
+  <i class="fas fa-flask fa-2x" style="color:#00BCD4"> </i>
+
+        
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="uk-card-body">
+    
+      <img src="topic02-primitive-arrays/book-1-array-exercises/img/main.png">
+    
+  </div>
+
+    
+  
+    </a>
+  
+
+    
+  
+
+    
+  
+    <div class="uk-card-footer">
+      <p> <p>Scanner · primitive arrays · counter-controlled loops</p>
+</p>
+    </div>
+  
+
+    
+  
+
+  </div>
+
+
+
+            
+          
+        </div>
+      
+        <div>
+          
+            
+              
+
+  
+  
+
+  <div class="uk-card uk-card-default 
+  
+    uk-card-hover
+  
+ uk-card-small uk-text-center uk-text-baseline uk-animation-fade">
+    
+  
+    
+      
+      
+    
+    <a href=topic02-primitive-arrays/book-2-shop-v2.x/index.html>
+  
+
+    
+  <div class="uk-card-header">
+    <div uk-grid>
+      <div class="uk-width-expand@m">
+        <h3> Lab-02b</h3>
+      </div>
+      <div class="uk-width-1-4@m">
+        
+  <i class="fas fa-flask fa-2x" style="color:#00BCD4"> </i>
+
+        
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="uk-card-body">
+    
+      <img src="topic02-primitive-arrays/book-2-shop-v2.x/img/main.png">
+    
+  </div>
+
+    
+  
+    </a>
+  
+
+    
+  
+
+    
+  
+    <div class="uk-card-footer">
+      <p> <p>ShopV2.0 (primitive array) · ShopV2.1 (methods operating on arrays) · ShopV2.2 (console menu system)</p>
+</p>
+    </div>
+  
+
+    
+  
+
+  </div>
+
+
+
+            
+          
+        </div>
+      
+        <div>
+          
+            
+              
+
+  
+  
+
+  <div class="uk-card uk-card-default 
+  
+    uk-card-hover
+  
+ uk-card-small uk-text-center uk-text-baseline uk-animation-fade">
+    
+  
+    
+      
+      
+    
+    <a href=topic03-arraylists/book-1-arraylists/index.html>
+  
+
+    
+  <div class="uk-card-header">
+    <div uk-grid>
+      <div class="uk-width-expand@m">
+        <h3> Lab-03</h3>
+      </div>
+      <div class="uk-width-1-4@m">
+        
+  <i class="fas fa-flask fa-2x" style="color:#00BCD4"> </i>
+
+        
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="uk-card-body">
+    
+      <img src="topic03-arraylists/book-1-arraylists/img/main.png">
+    
+  </div>
+
+    
+  
+    </a>
+  
+
+    
+  
+
+    
+  
+    <div class="uk-card-footer">
+      <p> <p>Collections · Generic Classes · ArrayList · loops · for each loop · Menu Driven Apps</p>
+</p>
+    </div>
+  
+
+    
+  
+
+  </div>
+
+
+
+            
+          
+        </div>
+      
+        <div>
+          
+            
+              
+
+  
+  
+
+  <div class="uk-card uk-card-default 
+  
+    uk-card-hover
+  
+ uk-card-small uk-text-center uk-text-baseline uk-animation-fade">
+    
+  
+    
+      
+      
+    
+    <a href=topic04-menu-and-crud/book-1-loop-exercises/index.html>
+  
+
+    
+  <div class="uk-card-header">
+    <div uk-grid>
+      <div class="uk-width-expand@m">
+        <h3> Lab-04a</h3>
+      </div>
+      <div class="uk-width-1-4@m">
+        
+  <i class="fas fa-flask fa-2x" style="color:#00BCD4"> </i>
+
+        
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="uk-card-body">
+    
+      <img src="topic04-menu-and-crud/book-1-loop-exercises/img/main.png">
+    
+  </div>
+
+    
+  
+    </a>
+  
+
+    
+  
+
+    
+  
+    <div class="uk-card-footer">
+      <p> <p>ArrayList · loops</p>
+</p>
+    </div>
+  
+
+    
+  
+
+  </div>
+
+
+
+            
+          
+        </div>
+      
+        <div>
+          
+            
+              
+
+  
+  
+
+  <div class="uk-card uk-card-default 
+  
+    uk-card-hover
+  
+ uk-card-small uk-text-center uk-text-baseline uk-animation-fade">
+    
+  
+    
+      
+      
+    
+    <a href=topic04-menu-and-crud/book-2-crud/index.html>
+  
+
+    
+  <div class="uk-card-header">
+    <div uk-grid>
+      <div class="uk-width-expand@m">
+        <h3> Lab-04b</h3>
+      </div>
+      <div class="uk-width-1-4@m">
+        
+  <i class="fas fa-flask fa-2x" style="color:#00BCD4"> </i>
+
+        
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="uk-card-body">
+    
+      <img src="topic04-menu-and-crud/book-2-crud/img/main.png">
+    
+  </div>
+
+    
+  
+    </a>
+  
+
+    
+  
+
+    
+  
+    <div class="uk-card-footer">
+      <p> <p>CRUD · ShopV4.0 · DVDLibraryV2.0 · Debugging</p>
+</p>
+    </div>
+  
+
+    
+  
+
+  </div>
+
+
+
+            
+          
+        </div>
+      
+        <div>
+          
+            
+              
+
+  
+  
+
+  <div class="uk-card uk-card-default 
+  
+    uk-card-hover
+  
+ uk-card-small uk-text-center uk-text-baseline uk-animation-fade">
+    
+  
+    
+      
+      
+    
+    <a href=topic05-persistence-xml-exceptions/book-xml-exceptions/index.html>
+  
+
+    
+  <div class="uk-card-header">
+    <div uk-grid>
+      <div class="uk-width-expand@m">
+        <h3> Lab-05</h3>
+      </div>
+      <div class="uk-width-1-4@m">
+        
+  <i class="fas fa-flask fa-2x" style="color:#00BCD4"> </i>
+
+        
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="uk-card-body">
+    
+      <img src="topic05-persistence-xml-exceptions/book-xml-exceptions/img/main.png">
+    
+  </div>
+
+    
+  
+    </a>
+  
+
+    
+  
+
+    
+  
+    <div class="uk-card-footer">
+      <p> <p>XML · Exception Handling · Validate User Input · ShopV5.0 · DVD3.0</p>
+</p>
+    </div>
+  
+
+    
+  
+
+  </div>
+
+
+
+            
+          
+        </div>
+      
+        <div>
+          
+            
+              
+
+  
+  
+
+  <div class="uk-card uk-card-default 
+  
+    uk-card-hover
+  
+ uk-card-small uk-text-center uk-text-baseline uk-animation-fade">
+    
+  
+    
+      
+      
+    
+    <a href=topic06-collections-map-set/book/index.html>
+  
+
+    
+  <div class="uk-card-header">
+    <div uk-grid>
+      <div class="uk-width-expand@m">
+        <h3> Lab-06</h3>
+      </div>
+      <div class="uk-width-1-4@m">
+        
+  <i class="fas fa-flask fa-2x" style="color:#00BCD4"> </i>
+
+        
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="uk-card-body">
+    
+      <img src="topic06-collections-map-set/book/img/main.png">
+    
+  </div>
+
+    
+  
+    </a>
+  
+
+    
+  
+
+    
+  
+    <div class="uk-card-footer">
+      <p> <p>ArrayList · HashMap · HashSet · Tokenise Strings · Random · Tech Support App</p>
+</p>
+    </div>
+  
+
+    
+  
+
+  </div>
+
+
+
+            
+          
+        </div>
+      
+        <div>
+          
+            
+              
+
+  
+  
+
+  <div class="uk-card uk-card-default 
+  
+    uk-card-hover
+  
+ uk-card-small uk-text-center uk-text-baseline uk-animation-fade">
+    
+  
+    
+      
+      
+    
+    <a href=topic07-inher-polym/book/index.html>
+  
+
+    
+  <div class="uk-card-header">
+    <div uk-grid>
+      <div class="uk-width-expand@m">
+        <h3> Lab-07</h3>
+      </div>
+      <div class="uk-width-1-4@m">
+        
+  <i class="fas fa-flask fa-2x" style="color:#00BCD4"> </i>
+
+        
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="uk-card-body">
+    
+      <img src="topic07-inher-polym/book/img/main.png">
+    
+  </div>
+
+    
+  
+    </a>
+  
+
+    
+  
+
+    
+  
+    <div class="uk-card-footer">
+      <p> <p>Social Network app · Inheritance · Polymorphism · Overriding</p>
+</p>
+    </div>
+  
+
+    
+  
+
+  </div>
+
+
+
+            
+          
+        </div>
+      
+        <div>
+          
+            
+              
+
+  
+  
+
+  <div class="uk-card uk-card-default 
+  
+    uk-card-hover
+  
+ uk-card-small uk-text-center uk-text-baseline uk-animation-fade">
+    
+  
+    
+      
+      
+    
+    <a href=topic08-abstraction/book-1-abstraction/index.html>
+  
+
+    
+  <div class="uk-card-header">
+    <div uk-grid>
+      <div class="uk-width-expand@m">
+        <h3> Lab-08</h3>
+      </div>
+      <div class="uk-width-1-4@m">
+        
+  <i class="fas fa-flask fa-2x" style="color:#00BCD4"> </i>
+
+        
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="uk-card-body">
+    
+      <img src="topic08-abstraction/book-1-abstraction/img/main.png">
+    
+  </div>
+
+    
+  
+    </a>
+  
+
+    
+  
+
+    
+  
+    <div class="uk-card-footer">
+      <p> <p>Social Network app · Abstraction</p>
+</p>
+    </div>
+  
+
+    
+  
+
+  </div>
+
+
+
+            
+          
+        </div>
+      
+        <div>
+          
+            
+              
+
+  
+  
+
+  <div class="uk-card uk-card-default 
+  
+    uk-card-hover
+  
+ uk-card-small uk-text-center uk-text-baseline uk-animation-fade">
+    
+  
+    
+      
+      
+    
+    <a href=topic09-interfaces/book-interfaces/index.html>
+  
+
+    
+  <div class="uk-card-header">
+    <div uk-grid>
+      <div class="uk-width-expand@m">
+        <h3> Lab-09</h3>
+      </div>
+      <div class="uk-width-1-4@m">
+        
+  <i class="fas fa-flask fa-2x" style="color:#00BCD4"> </i>
+
+        
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="uk-card-body">
+    
+      <img src="topic09-interfaces/book-interfaces/img/main.png">
+    
+  </div>
+
+    
+  
+    </a>
+  
+
+    
+  
+
+    
+  
+    <div class="uk-card-footer">
+      <p> <p>Abstraction · Interfaces · Social Network App · Interfaces and Collections</p>
+</p>
+    </div>
+  
+
+    
+  
+
+  </div>
+
+
+
+            
+          
+        </div>
+      
+        <div>
+          
+            
+              
+
+  
+  
+
+  <div class="uk-card uk-card-default 
+  
+    uk-card-hover
+  
+ uk-card-small uk-text-center uk-text-baseline uk-animation-fade">
+    
+  
+    
+      
+      
+    
+    <a href=topic10-TDD-and-JUnit/book-tdd/index.html>
+  
+
+    
+  <div class="uk-card-header">
+    <div uk-grid>
+      <div class="uk-width-expand@m">
+        <h3> Lab-10</h3>
+      </div>
+      <div class="uk-width-1-4@m">
+        
+  <i class="fas fa-flask fa-2x" style="color:#00BCD4"> </i>
+
+        
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="uk-card-body">
+    
+      <img src="topic10-TDD-and-JUnit/book-tdd/img/main.png">
+    
+  </div>
+
+    
+  
+    </a>
+  
+
+    
+  
+
+    
+  
+    <div class="uk-card-footer">
+      <p> <p>JUnit · Test Classes · Annotations · Automating Tests</p>
+</p>
+    </div>
+  
+
+    
+  
+
+  </div>
+
+
+
+            
+          
+        </div>
+      
+        <div>
+          
+            
+              
+
+  
+  
+
+  <div class="uk-card uk-card-default 
+  
+    uk-card-hover
+  
+ uk-card-small uk-text-center uk-text-baseline uk-animation-fade">
+    
+  
+    
+      
+      
+    
+    <a href=topic11-additional-material/book-1-shopv6/index.html>
+  
+
+    
+  <div class="uk-card-header">
+    <div uk-grid>
+      <div class="uk-width-expand@m">
+        <h3> ShopV6.0</h3>
+      </div>
+      <div class="uk-width-1-4@m">
+        
+  <i class="fas fa-flask fa-2x" style="color:#00BCD4"> </i>
+
+        
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="uk-card-body">
+    
+      <img src="topic11-additional-material/book-1-shopv6/img/main.png">
+    
+  </div>
+
+    
+  
+    </a>
+  
+
+    
+  
+
+    
+  
+    <div class="uk-card-footer">
+      <p> <p>Packages, Utilities and Parsing: use a package structure for the Shop app and also to write re-usable utilities.  We will also experiment with Wrapper classes and parsing.</p>
+</p>
+    </div>
+  
+
+    
+  
+
+  </div>
+
+
+
+            
+          
+        </div>
+      
+    </div>
+  </div>
+
+
+        </div>
+      </div>
+      <div class="footer uk-text-small uk-text-right uk-text-muted"> Powered by <a
+          href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a>
+        
+      </div>
+    </div>
   </body>
-
- </html>
+</html>

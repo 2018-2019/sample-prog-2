@@ -171,6 +171,13 @@ html, body {
         
           
             <a class="item"
+               href="http://2018-2019.github.io/prog-fund-2//topic00-assignments-2/book-b/index.html">Assignment2 </a>
+          
+        
+      
+        
+          
+            <a class="item"
                href="http://2018-2019.github.io/prog-fund-2//topic01-IntelliJ-JVM-and-IO/unit-01b-labs/book-a-install/index.html">Lab-01a </a>
           
         
@@ -371,7 +378,7 @@ html, body {
 <p>This method removes an Artist object at the location <em>index</em>, which is passed as a paramter.  There is some validation in this method (same as in getArtist method above):</p>
 <ul>
 <li>Check that the passed index exists in the ArrayList, before accessing the ArrayList.</li>
-<li>If the passed index is not valid, return <em>null</em>. </li>
+<li>If the passed index is not valid, return <em>false</em>. </li>
 </ul>
 <h2>Methods (listOfArtists)</h2>
 <p>This method is similar-ish to a toString.<br>It builds (and returns) a String of all Artist objects in the ArrayList.  Each object is on a new line.  The beginning of the line has the index number of the object in the ArrayList i.e.:</p>
@@ -448,7 +455,7 @@ html, body {
 <p>This method removes a Song object at the location <em>index</em>, which is passed as a paramter.  There is some validation in this method (same as in getArtist method in the ArtistList class):</p>
 <ul>
 <li>Check that the passed index exists in the ArrayList, before accessing the ArrayList.</li>
-<li>If the passed index is not valid, return <em>null</em>. </li>
+<li>If the passed index is not valid, return <em>false</em>. </li>
 </ul>
 <h2>Methods (numberOfSongs)</h2>
 <p>This method returns the number of Song objects stored in the ArrayList <em>songs</em>.</p>
@@ -459,13 +466,13 @@ html, body {
 <h2>Methods (listSongsBySpecificGenre)</h2>
 <p>This method builds (and returns) a String of all Song objects in the ArrayList whose <em>genre</em> matches the one passed as a parameter.  Each object is on a new line i.e.:</p>
 <p><img src="img/11.png" alt=""></p>
-<p>If there are no songs in the ArrayList, the following message should be returned:  <strong>There are no songs in the list</strong>.</p>
+<p>If there are no songs in the ArrayList, the following message should be returned:  <strong>There are no songs stored in the list</strong>.</p>
 <p>If there are songs in the ArrayList but none of them have the genre entered by the user (i.e. passed as a parameter), then the following message should be returned:  <strong>&quot;There are no songs with the genre: &quot; + genre</strong></p>
 <p>Note: cater for case sensitivity in your searches i.e. Rock, ROCK, rock should be the same for search purposes (see screen shot above). </p>
 <h2>Methods (listSongsBySpecificArtist)</h2>
 <p>This method builds (and returns) a String of all Song objects in the ArrayList whose <em>artistName</em> matches the one passed as a parameter.  Each object is on a new line i.e.:</p>
 <p><img src="img/12.png" alt=""></p>
-<p>If there are no songs in the ArrayList, the following message should be returned:  <strong>There are no songs in the list</strong>.</p>
+<p>If there are no songs in the ArrayList, the following message should be returned:  <strong>There are no songs stored in the list</strong>.</p>
 <p>If there are songs in the ArrayList but none of them are by the artistName entered by the user (i.e. passed as a parameter), then the following message should be returned:  <strong>&quot;There are no songs for the artist: &quot; + artist</strong></p>
 <p>Remember to cater for case-sensitive searches. </p>
 <h2>Methods (longestSong)</h2>
@@ -719,9 +726,15 @@ html, body {
 </li>
 </ul>
 <p>The above totals to 100%.</p>
+<h2>Extra Credit</h2>
+<p>Extras - 10% will be available to include extras like including exceptions throughout, robust error handling, etc. This 10% is only available if all other functionalities are attempted and will bring your mark to a maximum of 100%.  Good examples of extra credit functionality could be:</p>
 <ul>
-<li>Extras - 10% will be available to include extras like including exceptions throughout, robust error handling, etc. This 10% is only available if all other functionalities are attempted and will bring your mark to a maximum of 100%.  A good example of extra credit functionality could be to do a cascade delete on the Artist i.e. delete all the songs associated with the artist.  If attempting this, you might need to do a bit of research on the .equals() method.  </li>
+<li><p>to do a cascade delete on the Artist i.e. delete all the songs associated with the artist.  If attempting this, you might need to do a bit of research on the .equals() method.  </p>
+</li>
+<li><p>when adding an Artist to a Song, you might have noticed that you had to select an Artist from a list of pre-existing artists.  There was no option to allow the user to add a new Artist.  Instead, what you could do is allow the user to enter, say, -1 to add a new Artist.  </p>
+</li>
 </ul>
+<p>Note: If you are making changes to the functionality, it may be the case that the tests will fail for that particular area.  In this case, you are permitted to update the tests to reflect this new functionality, but please include a README with your project to indicate that you have done this. </p>
 <h2>Interviews</h2>
 <p>The grade for the interview is a multiplier for your assigment grade.  Should you fail to show for your interview, you will receive zero, resulting in an overall grade of zero for your submission.</p>
 <h2>Use of JUnit when developing your code</h2>
